@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Wizard Registration</title>
+
+<link rel="stylesheet" href="{% static 'css/register.css' %}">
+
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div class="stars"></div>
+<div class="fog"></div>
+
+<div class="container">
+
+<h1 class="title">Wizard Registration</h1>
+
+<form id="registerForm" action="{% url 'register_user' %}" method="post">
+    {% csrf_token %}
+
+<input type="text" id="name" placeholder="Full Name" required name="name" autocomplete="name">
+
+<input type="text" id="reg_num" placeholder="UAP Registration ID" required name="reg_num" autocomplete="username">
+
+<input type="email" id="email" placeholder="Use UAP Mail" required name="email" autocomplete="email">
+
+<input type="password" id="password" placeholder="Use password" required name="password" autocomplete="current-password">
+
+<select id="type" name="type" required autocomplete="off">
+<option value="">Select Type</option>
+<option value="freshers">Freshers</option>
+<option value="attendee">Attendee</option>
+<option value="volunteer">Volunteer</option>
+</select>
+
+
+<div id="batchField" class="hidden">
+
+<select id="batch" name="batch" autocomplete="off">
+
+<option value="">Select Batch</option>
+<option>58</option>
+<option>57</option>
+<option>56</option>
+<option>55</option>
+<option>54</option>
+<option>53</option>
+<option>52</option>
+<option>51</option>
+<option>50</option>
+
+</select>
+
+</div>
+
+
+<div id="volunteerField" class="hidden">
+
+<select id="segment" name="segment" autocomplete="off">
+
+<option>Food</option>
+<option>Decoration</option>
+
+</select>
+
+</div>
+
+
+
+<div id="paymentBox" class="hidden">
+
+<!--<h3>Payment Required</h3>
+
+
+<p>Batch 56 & 57 need to complete payment.</p>
+
+<button type="button">  Pay through CR. </button>-->
+
+
+</div>
+
+
+<button type="submit" class="registerBtn">
+Register
+</button>
+
+</form>
+
+</div>
+
+
+<div class="owl">🦉</div>
+
+<footer>
+
+<p>© Freshers Reception fall 2025</p>
+
+</footer>
+
+
+<script src="{% static 'js/register.js' %}?v=4"></script>
+</body>
+</html>

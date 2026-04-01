@@ -1,0 +1,102 @@
+body{
+margin:0;
+font-family:'Cinzel', serif;
+background:#0a1208; /* Dark Slytherin greenish night */
+color:white;
+overflow-x:hidden;
+}
+
+/* Header */
+header{
+text-align:center;
+margin-top:50px;
+animation:fadeIn 2s;
+}
+
+.page-title{
+font-family:'MedievalSharp';
+font-size:50px;
+text-shadow:0 0 10px #0f9d58,0 0 20px #ffd700; /* Slytherin green + gold */
+}
+
+/* Contact Section */
+.contact-section{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:30px;
+padding:50px 20px;
+}
+
+.contact-card{
+background:rgba(20,35,25,0.8);
+border-radius:10px;
+padding:30px;
+width:250px;
+text-align:center;
+position:relative;
+cursor:pointer;
+transition:transform 0.5s, box-shadow 0.5s;
+animation:fadeIn 2s;
+}
+
+.contact-card h3{
+font-family:'MedievalSharp';
+color:#0f9d58; /* green titles */
+}
+
+.contact-card:hover{
+transform:translateY(-10px);
+box-shadow:0 0 20px #0f9d58,0 0 30px #ffd700;
+}
+
+.owl-card{
+position:absolute;
+top:-30px;
+right:10px;
+font-size:30px;
+opacity:0;
+transition:all 0.5s;
+}
+
+.contact-card:hover .owl-card{
+opacity:1;
+top:-50px;
+transform:rotate(-20deg);
+}
+
+/* 🌌 stars */
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:starsMove 200s linear infinite;
+z-index:-2;
+}
+
+/* 🌫 fog */
+.fog{
+position:absolute;
+width:200%;
+height:100%;
+background:radial-gradient(circle,rgba(255,255,255,0.03),transparent);
+animation:fogMove 60s linear infinite;
+z-index:-1;
+}
+
+/* fade */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1;}
+}
+
+@keyframes starsMove{
+from{background-position:0 0}
+to{background-position:10000px 5000px}
+}
+
+@keyframes fogMove{
+from{transform:translateX(-50%)}
+to{transform:translateX(0)}
+}

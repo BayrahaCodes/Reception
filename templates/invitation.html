@@ -1,0 +1,38 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Sender</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/mail.css' %}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="title">Send Emails</h1>
+
+    <div class="buttons">
+        <button class="btn" data-type="president" onclick="window.location.href='{% url 'club_permission' %}'">
+            Send to Club Presidents
+        </button>
+
+        <button class="btn" data-type="users" onclick="window.location.href='{% url 'batch_invitation' %}'">
+            Send to Users
+        </button>
+
+        <button class="btn" data-type="crs" onclick="window.location.href='{% url 'senior_invitation' %}'">
+            Send to Senior CRs
+        </button>
+    </div>
+
+    <p id="status"></p>
+</div>
+
+<!-- JS -->
+<script src="{% static 'js/mail.js' %}"></script>
+
+</body>
+</html>

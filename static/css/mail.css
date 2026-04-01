@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 25px rgba(0,0,0,0.4);
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 32px;
+    letter-spacing: 1px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.btn {
+    padding: 15px 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    background: linear-gradient(45deg, #ffcc00, #ff8800);
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 0 15px rgba(255, 200, 0, 0.7);
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Loading animation */
+.loading {
+    background: gray !important;
+    cursor: not-allowed;
+}
+
+/* Status text */
+#status {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #ddd;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#status.show {
+    opacity: 1;
+}

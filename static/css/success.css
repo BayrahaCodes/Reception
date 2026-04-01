@@ -1,0 +1,102 @@
+/* success.css */
+
+/* Body styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Garamond', serif;
+    background: radial-gradient(circle at top, #1a1a1a, #000);
+    color: #f5deb3; /* parchment-like */
+    overflow-x: hidden;
+}
+
+/* Container for everything */
+.magic-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Letter card */
+.letter {
+    background: rgba(255, 248, 220, 0.95);
+    border: 2px solid #d4af37;
+    padding: 40px 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #d4af37;
+    max-width: 500px;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+.title {
+    font-family: 'Harry P', cursive; /* Harry Potter font */
+    font-size: 2rem;
+    color: #6b2e1a;
+    margin-bottom: 20px;
+}
+
+.message {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.home-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #6b2e1a;
+    color: #fff3e0;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+.home-btn:hover {
+    background: #d4af37;
+    color: #000;
+}
+
+/* Owl animation */
+.owl-container {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+.owl {
+    width: 80px;
+    animation: fly 5s infinite alternate ease-in-out;
+}
+
+/* Owl flying keyframes */
+@keyframes fly {
+    0% { transform: translateY(0) rotate(0deg); }
+    50% { transform: translateY(-15px) rotate(15deg); }
+    100% { transform: translateY(0) rotate(0deg); }
+}
+
+/* Sparkle effect */
+.sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 10px #fff, 0 0 20px #ffd700, 0 0 30px #ff4500;
+    pointer-events: none;
+    animation: sparkleAnim 2s linear;
+}
+
+@keyframes sparkleAnim {
+    0% { opacity: 1; transform: scale(1); }
+    100% { opacity: 0; transform: scale(2); }
+}
+
+/* Fade in letter */
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(-50px); }
+    100% { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link rel="stylesheet" href="{% static 'css/success.css' %}">
+</head>
+<body>
+    <div class="magic-container">
+        <!-- Hogwarts Letter -->
+        <div class="letter">
+            <h1 class="title">🪄 Welcome to the Wizarding World!</h1>
+            <p class="message" style="color: green">
+                Your registration is complete!  
+                Check your owl-post (email: {{ email }}) for the confirmation.  
+                Hogwarts awaits your magical presence.
+            </p>
+            <a href="{% url 'home' %}" class="home-btn">Return to Muggle World</a>
+        </div>
+
+        <!-- Owl image flying -->
+        <div class="owl-container">
+            <img src="{% static 'images/owl.jpg' %}" alt="Owl delivering letter" class="owl">
+        </div>
+    </div>
+
+    <!-- Sparkle Effect JS -->
+    <script>
+        const container = document.querySelector('.magic-container');
+        function createSparkle() {
+            const sparkle = document.createElement('div');
+            sparkle.classList.add('sparkle');
+            sparkle.style.left = Math.random() * window.innerWidth + 'px';
+            sparkle.style.top = Math.random() * window.innerHeight + 'px';
+            container.appendChild(sparkle);
+            setTimeout(() => sparkle.remove(), 2000);
+        }
+        setInterval(createSparkle, 300);
+    </script>
+</body>
+</html>

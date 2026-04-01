@@ -1,0 +1,117 @@
+body{
+margin:0;
+font-family:'Cinzel', serif;
+background:#0a0f1a; /* Dark night theme */
+color:white;
+overflow-x:hidden;
+}
+
+/* Header */
+header{
+text-align:center;
+margin-top:50px;
+animation:fadeIn 2s;
+}
+
+.page-title{
+font-family:'MedievalSharp';
+font-size:50px;
+text-shadow: 0 0 10px #ff0000, 0 0 20px #ffd700; /* Gryffindor red/gold */
+}
+
+/* Section */
+.ideas-section{
+padding:50px 20px;
+display:flex;
+flex-direction:column;
+align-items:center;
+gap:40px;
+}
+
+/* Form */
+.idea-form{
+background:rgba(30,35,50,0.8);
+padding:30px;
+border-radius:10px;
+width:350px;
+display:flex;
+flex-direction:column;
+gap:20px;
+backdrop-filter:blur(5px);
+animation:fadeIn 2s;
+}
+
+.idea-form textarea, .idea-form select{
+padding:12px;
+border:none;
+border-radius:5px;
+font-size:16px;
+}
+
+.idea-form button{
+padding:12px;
+border:none;
+border-radius:5px;
+background:linear-gradient(45deg, #ff0000, #ffd700); /* Gryffindor red/gold */
+color:black;
+font-weight:bold;
+cursor:pointer;
+transition:all 0.3s;
+}
+
+.idea-form button:hover{
+transform:scale(1.05);
+box-shadow:0 0 20px #ffd700,0 0 30px #ff0000;
+}
+
+/* Owl */
+.owl{
+position:absolute;
+top:-100px;
+left:50%;
+font-size:40px;
+animation:dropOwl 6s ease;
+}
+
+/* 🌌 stars */
+.stars{
+position:absolute;
+width:100%;
+height:100%;
+background:url("https://www.transparenttextures.com/patterns/stardust.png");
+animation:starsMove 200s linear infinite;
+z-index:-2;
+}
+
+/* 🌫 fog */
+.fog{
+position:absolute;
+width:200%;
+height:100%;
+background:radial-gradient(circle,rgba(255,255,255,0.03),transparent);
+animation:fogMove 60s linear infinite;
+z-index:-1;
+}
+
+/* Fade animation */
+@keyframes fadeIn{
+from{opacity:0; transform:translateY(20px);}
+to{opacity:1;}
+}
+
+@keyframes starsMove{
+from{background-position:0 0}
+to{background-position:10000px 5000px}
+}
+
+@keyframes fogMove{
+from{transform:translateX(-50%)}
+to{transform:translateX(0)}
+}
+
+@keyframes dropOwl{
+0%{top:-200px}
+60%{top:120px}
+80%{top:100px}
+100%{top:120px}
+}

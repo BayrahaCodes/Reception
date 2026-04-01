@@ -1,0 +1,135 @@
+body{
+    margin:0;
+    font-family:'Cinzel', serif;
+    background:#050910;
+    color:white;
+    overflow-x:hidden;
+}
+
+/* Header */
+header{
+    text-align:center;
+    margin-top:50px;
+    animation:fadeIn 2s;
+}
+
+.page-title{
+    font-family:'MedievalSharp';
+    font-size:50px;
+    text-shadow:0 0 10px gold,0 0 20px orange;
+}
+
+/* Section */
+.gallery-section{
+    padding:50px 20px;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:40px;
+}
+
+/* Section Titles */
+.section-title{
+    font-family:'MedievalSharp';
+    font-size:30px;
+    margin-top:20px;
+    text-shadow:0 0 8px gold;
+}
+
+/* Grid */
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+    width:100%;
+    max-width:1000px;
+}
+
+/* Card */
+.gallery-item{
+    position:relative;
+    border-radius:10px;
+    overflow:hidden;
+    cursor:pointer;
+    height:250px;   /* 🔥 fixed height */
+    background:#111;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border:1px solid rgba(255,255,255,0.1);
+    box-shadow:0 0 15px rgba(255,215,0,0.2);
+    transition:transform 0.5s, box-shadow 0.5s;
+}
+
+/* Image FIX */
+.gallery-item img{
+    max-width:100%;
+    max-height:100%;
+    object-fit:contain;   /* 🔥 FULL image visible */
+    transition:transform 0.5s, filter 0.5s;
+}
+
+/* Hover effect */
+.gallery-item:hover img{
+    transform:scale(1.05);
+    filter:brightness(1.2);
+}
+
+.gallery-item:hover{
+    transform:translateY(-5px);
+    box-shadow:0 0 25px gold;
+}
+
+/* Owl animation */
+.owl-img{
+    position:absolute;
+    top:-30px;
+    right:10px;
+    font-size:30px;
+    opacity:0;
+    transition:all 0.5s;
+}
+
+.gallery-item:hover .owl-img{
+    opacity:1;
+    top:-50px;
+    transform:rotate(-20deg);
+}
+
+/* Stars */
+.stars{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background:url("https://www.transparenttextures.com/patterns/stardust.png");
+    animation:starsMove 200s linear infinite;
+    z-index:-2;
+}
+
+@keyframes starsMove{
+    from{background-position:0 0}
+    to{background-position:10000px 5000px}
+}
+
+/* Fog */
+.fog{
+    position:absolute;
+    width:200%;
+    height:100%;
+    background:radial-gradient(circle,rgba(255,255,255,0.03),transparent);
+    animation:fogMove 60s linear infinite;
+    z-index:-1;
+}
+
+/* Footer */
+footer{
+    text-align:center;
+    padding:20px;
+    opacity:0.7;
+}
+
+/* Fade animation */
+@keyframes fadeIn{
+    from{opacity:0; transform:translateY(20px);}
+    to{opacity:1;}
+}

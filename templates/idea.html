@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ideas | Wizarding Reception</title>
+
+<link rel="stylesheet" href="{% static 'css/ideas.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+<div class="stars"></div>
+<div class="fog"></div>
+
+<header>
+<h1 class="page-title">Magic Idea Box</h1>
+</header>
+
+<section class="ideas-section">
+
+<form id="ideaForm" class="idea-form" action="{% url 'take_idea' %}" method="post">
+{% csrf_token %}
+<textarea name="idea" placeholder="Share your magical idea..."></textarea>
+<input id="name" name="name" type="text" placeholder="Your Name (optional)">
+<input id="email" name="email" type="email" placeholder="Your Email (optional)">
+<!--
+
+<select id="house">
+<option value="">Select Your House (optional)</option>
+<option value="gryffindor">Gryffindor</option>
+<option value="slytherin">Slytherin</option>
+<option value="ravenclaw">Ravenclaw</option>
+<option value="hufflepuff">Hufflepuff</option>
+</select>
+
+-->
+
+<button type="submit" onclick={% url 'take_idea' %}>Send Idea</button>
+</form>
+
+<div class="owl">🦉</div>
+
+</section>
+
+<footer>
+<p>© Freshers Reception 2025 | Wizarding Theme</p>
+</footer>
+
+<script src="{% static 'js/ideas.js' %}"></script>
+</body>
+</html>

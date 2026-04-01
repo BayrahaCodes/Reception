@@ -1,0 +1,223 @@
+
+body{
+margin:0;
+font-family:'Cinzel',serif;
+background:#0a0f1f;
+color:white;
+overflow-x:hidden;
+}
+
+.navbar{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:20px 40px;
+background:#0b0f1a;
+}
+
+.logo{
+font-family:'MedievalSharp';
+}
+
+.nav-links{
+list-style:none;
+display:flex;
+gap:25px;
+}
+
+.nav-links a{
+color:white;
+text-decoration:none;
+}
+
+
+.hero{
+
+height:100vh;
+
+background:url("static/images/image_01.jpeg") center/cover ;
+
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+
+position:relative;
+
+transition:background-image 1s ease-in-out;
+
+}
+
+
+.moon{
+width:120px;
+height:120px;
+background:white;
+border-radius:50%;
+position:absolute;
+top:80px;
+left:120px;
+box-shadow:0 0 40px white;
+opacity:.8;
+}
+
+
+.owl{
+
+position:absolute;
+top:120px;
+right:-100px;
+font-size:50px;
+
+animation:fly 15s linear infinite;
+
+}
+
+@keyframes fly{
+
+0%{right:-100px}
+100%{right:110%}
+
+}
+
+
+.candles span{
+
+position:absolute;
+width:10px;
+height:30px;
+background:#ffd27f;
+
+bottom:0;
+
+animation:float 6s infinite;
+
+}
+
+.candles span:nth-child(1){left:10%}
+.candles span:nth-child(2){left:25%}
+.candles span:nth-child(3){left:40%}
+.candles span:nth-child(4){left:60%}
+.candles span:nth-child(5){left:80%}
+
+@keyframes float{
+
+0%{transform:translateY(0)}
+50%{transform:translateY(-120px)}
+100%{transform:translateY(0)}
+
+}
+
+
+.magic-title{
+
+font-family:'MedievalSharp';
+font-size:60px;
+
+text-shadow:
+0 0 10px gold,
+0 0 20px gold,
+0 0 40px orange;
+
+}
+
+
+.hero button{
+
+margin-top:20px;
+padding:12px 30px;
+
+border:none;
+
+background:#c9a227;
+
+color:black;
+
+font-weight:bold;
+
+cursor:pointer;
+
+}
+
+
+.section{
+
+padding:80px 10%;
+text-align:center;
+
+}
+
+
+.cards{
+
+display:flex;
+gap:30px;
+justify-content:center;
+flex-wrap:wrap;
+
+}
+
+.card{
+
+background:#1c2233;
+padding:20px;
+border-radius:10px;
+width:250px;
+
+}
+
+
+.gallery{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+
+}
+
+.gallery img{
+
+width:100%;
+border-radius:10px;
+
+}
+
+
+form{
+
+display:flex;
+flex-direction:column;
+gap:15px;
+max-width:400px;
+margin:auto;
+
+}
+
+
+input,select,textarea{
+
+padding:10px;
+border-radius:6px;
+border:none;
+
+}
+
+
+button{
+
+background:#c9a227;
+border:none;
+padding:10px;
+cursor:pointer;
+
+}
+
+
+footer{
+
+background:#0b0f1a;
+padding:20px;
+text-align:center;
+
+}
+

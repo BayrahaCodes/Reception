@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-wzshe#7@+)2$50(mr*@j_!jp++l9i4ri&lf2a^j!9p6_90i2ul
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["reception-uap-batch-58.onrender.com"]
+ALLOWED_HOSTS = ["reception-uap-batch-58.onrender.com",'localhost', '127.0.0.1']
 
 
 # Application definition
@@ -104,13 +104,14 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
-
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 STATIC_URL = '/static/'
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
 
 import os
 
@@ -140,4 +141,12 @@ MIDDLEWARE = [
     ...
 ]
 
+import dj_database_url
 
+DATABASES = {
+    'default': dj_database_url.config(
+        default=os.environ.get('DATABASE_URL')
+    )
+}
+
+DEBUG = False

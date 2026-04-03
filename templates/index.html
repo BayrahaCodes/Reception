@@ -10,6 +10,8 @@
 
 <link rel="stylesheet" href="{% static 'css/index.css' %}">
 
+<link rel="stylesheet" href="{% static 'css/gellary.css' %}">
+
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=MedievalSharp&display=swap" rel="stylesheet">
 
 </head>
@@ -61,10 +63,6 @@
 
 <div id="countdown"></div>
 
-<button onclick="scrollToSection('{% url "register_user" %}')" >
-Enter the Wizarding World
-</button>
-
 </div>
 
 </section>
@@ -76,19 +74,13 @@ Enter the Wizarding World
 
 <form id="registerForm">
 
-<input type="text" placeholder="Full Name" required>
+
 
 <input type="email" id="email" placeholder="UAP Email" required>
 
-<select>
 
-<option>Fresher</option>
-<option>Volunteer</option>
-<option>General</option>
 
-</select>
-
-<button type="submit">Register</button>
+<button type="submit" >Register</button>
 
 </form>
 
@@ -105,17 +97,17 @@ Enter the Wizarding World
 
 <div class="card">
 <h3>Opening Ceremony</h3>
-<p>Welcome to the magical journey.</p>
+
 </div>
 
 <div class="card">
-<h3>House Challenge</h3>
-<p>Competition inspired by Hogwarts.</p>
+<h3>Club Introduction</h3>
+
 </div>
 
 <div class="card">
 <h3>Cultural Night</h3>
-<p>Music and performances.</p>
+
 </div>
 
 </div>
@@ -129,10 +121,11 @@ Enter the Wizarding World
 
 <div class="gallery">
 
-<img src="https://picsum.photos/300/200">
-<img src="https://picsum.photos/301/200">
-<img src="https://picsum.photos/302/200">
-<img src="https://picsum.photos/303/200">
+<img src="{% static 'images/nakiba_maam.jpg' %}">
+<img src="{% static 'images/kala_chasma.jpg' %}">
+
+<img src="{% static 'images/all_sit.jpg' %}">
+<img src="{% static 'images/in_stage.jpg' %}">
 
 </div>
 
@@ -140,10 +133,6 @@ Enter the Wizarding World
 
 </section>
 
-<form action="{% url 'send_mails' %}" method="post">
-    {% csrf_token %}
-    <button type="submit">Send Emails</button>
-</form>
 
 
 <section id="ideas" class="section">
@@ -165,14 +154,14 @@ Enter the Wizarding World
 
 <h2>Contact</h2>
 
-<p>Email: 24201163@uap.edu</p>
+<p>Email: 24201163@uap-bd.edu</p>
 
 </section>
 
 
 <footer>
 
-<p>© Freshers Reception fall 2025</p>
+<p>© Freshers Reception 2025 | organized by CSE Senior Batches 56 & 57</p>
 
 </footer>
 

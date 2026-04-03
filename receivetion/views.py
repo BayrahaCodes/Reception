@@ -41,7 +41,7 @@ def register_user(request):
         reg_num = request.POST.get("reg_num")
         password = request.POST.get("password")
 
-        pdf_path = os.path.join(settings.MEDIA_ROOT, "invitation.pdf")
+        pdf_path = os.path.join(settings.MEDIA_ROOT, "invitation.jpeg")
 
         current_time = timezone.now().strftime("%d %B %Y, %I:%M %p")
 
@@ -56,12 +56,12 @@ You are cordially invited to join us for a magical evening at the Fresher’s Re
 Let’s come together to celebrate new beginnings, create unforgettable memories, and warmly welcome our newest members.
 
 📅 Date: 7th April 2026
-⏰ Time: 5:00 PM – 9:00 PM
+⏰ Time: 5:00 PM – 8:30 PM
 📍 Venue: Auditorium, University of Asia Pacific
 
 ✨ Whether you are a Fresher, Volunteer, or Attendee — your presence will make this event even more special.
 
-Please find your invitation card attached with this email.
+
 
 We look forward to celebrating with you!
 

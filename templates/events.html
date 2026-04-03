@@ -6,13 +6,33 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Events | Wizarding Reception</title>
-
+<link rel="stylesheet" href="{% static 'css/index.css' %}">
 <link rel="stylesheet" href="{% static 'css/event.css' %}">
 <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&family=Cinzel:wght@400;700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
+
+<header>
+
+<nav class="navbar">
+
+<h1 class="logo">Wizarding Reception</h1>
+
+<ul class="nav-links">
+<li><a href="{% url 'home' %}">Home</a></li>
+<li><a href="{% url 'register' %}">Register</a></li>
+
+<li><a href="{% url 'events' %}">Events</a></li>
+<li><a href="{% url 'gallery' %}">Gallery</a></li>
+<li><a href="{% url 'ideas' %}">Ideas</a></li>
+<li><a href="{% url 'contact' %}">Contact</a></li> 
+</ul>
+
+</nav>
+
+</header>
 
 <div class="stars"></div>
 <div class="fog"></div>
@@ -25,32 +45,47 @@
 
 <div class="event-card">
 <h3>Opening Ceremony</h3>
-<p>Grand magical welcome for all new wizards.</p>
+<p>Speeech by Proctor --------5:00 to 5:10 pm</p>
+<p>Speech by Head of the CSE Department  --------5:10 to 5:20 pm</p>
+<p>Speech by Receiption's conveiner  --------5:20 to 5:30 pm</p>
+<p></p>
 <div class="owl-card">🦉</div>
 </div>
 
 <div class="event-card">
-<h3>House Challenges</h3>
-<p>Compete in Gryffindor, Slytherin, Ravenclaw, and Hufflepuff battles.</p>
+<h3>Club Introduction</h3>
+<p>
+<ul>
+    <li>Sports Club</li>
+    <li>Career Development Club</li>
+    <li>Photography Club</li>
+    <li>Robotics Club</li>
+    <li>Programming Contest Club</li>
+    <li>Research & Publication Club</li>
+    <li>Cultural Club</li>
+    <li>Software & Hardware Club</li>
+    <li>Math Club</li>
+</p>
 <div class="owl-card">🦉</div>
 </div>
 
 <div class="event-card">
 <h3>Cultural Night</h3>
-<p>Magical music, dances, and wizard performances.</p>
+<p>
+   <ul>
+    <li>Dance Performance</li>
+    <li>Music Performance</li>
+    <li>Drama Performance</li>
+</p>
 <div class="owl-card">🦉</div>
 </div>
 
-<div class="event-card">
-<h3>Wizard Workshops</h3>
-<p>Learn spells, potion-making, and magical crafts.</p>
-<div class="owl-card">🦉</div>
-</div>
+
 
 </section>
 
 <footer>
-<p>© Freshers Reception 2025 | Wizarding Theme</p>
+<p>© Freshers Reception 2025 |Organized by Batch 56 & Batch 57</p>
 </footer>
 
 <script src="{% static 'js/events.js' %}"></script>

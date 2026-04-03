@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-wzshe#7@+)2$50(mr*@j_!jp++l9i4ri&lf2a^j!9p6_90i2ul
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ["https://reception-uap-batch-58.onrender.com"]
+ALLOWED_HOSTS = ["reception-uap-batch-58.onrender.com"]
 
 
 # Application definition

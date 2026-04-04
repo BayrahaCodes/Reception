@@ -129,6 +129,10 @@ MIDDLEWARE = [
 ]
 import dj_database_url
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 3f4274d (fixed settings and wsgi)
 DATABASES = {
     'default': dj_database_url.config(
         default=os.environ.get('DATABASE_URL')
@@ -137,4 +141,8 @@ DATABASES = {
 
 DEBUG = False
 
+<<<<<<< HEAD
 WSGI_APPLICATION = 'receivetion.wsgi.application'
+=======
+WSGI_APPLICATION = 'receivetion.wsgi.application'
+>>>>>>> 3f4274d (fixed settings and wsgi)

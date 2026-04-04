@@ -16,5 +16,6 @@ import receivetion
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'receivetion.settings')
 
 application = get_wsgi_application()
+WSGI_APPLICATION = 'receivetion.wsgi.application'
 
 

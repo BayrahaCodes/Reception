@@ -6,8 +6,7 @@ from pathlib import Path
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-secret-key')
 
-
-
+BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'your-default-secret-key')
 
@@ -31,15 +30,7 @@ INSTALLED_APPS = [
     'receivetion',
 ]
 
-MIDDLEWARE = [
-    'django.middleware.security.SecurityMiddleware',
-    'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.common.CommonMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
-    'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'django.contrib.messages.middleware.MessageMiddleware',
-    'django.middleware.clickjacking.XFrameOptionsMiddleware',
-]
+
 
 ROOT_URLCONF = 'receivetion.urls'
 
@@ -69,6 +60,8 @@ DATABASES = {
         default=os.environ.get('DATABASE_URL')
     )
 }
+
+
 
 
 
@@ -126,10 +119,14 @@ MEDIA_URL = "/media/"
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
-    ...
+    'whitenoise.middleware.WhiteNoiseMiddleware',  # must be right here
+    'django.contrib.sessions.middleware.SessionMiddleware',
+    'django.middleware.common.CommonMiddleware',
+    'django.middleware.csrf.CsrfViewMiddleware',
+    'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'django.contrib.messages.middleware.MessageMiddleware',
+    'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
-
 import dj_database_url
 
 DATABASES = {
@@ -139,3 +136,5 @@ DATABASES = {
 }
 
 DEBUG = False
+
+WSGI_APPLICATION = 'receivetion.wsgi.application'

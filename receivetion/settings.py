@@ -85,6 +85,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+CSRF_TRUSTED_ORIGINS = [
+    "https://reception-wi7q.onrender.com"
+]
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = '/static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'

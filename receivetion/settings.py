@@ -41,7 +41,7 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
 EMAIL_HOST_USER = '24201163@uap-bd.edu'
-EMAIL_HOST_PASSWORD = 'qscl gghm jqum tgxd'
+EMAIL_HOST_PASSWORD = 'cqll btnt hwjy pjjs'
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 

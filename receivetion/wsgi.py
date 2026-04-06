@@ -1,12 +1,19 @@
-"""
-WSGI config for receivetion project.
 
-It exposes the WSGI callable as a module-level variable named ``application``.
-"""
+from django import views
+from django.contrib import admin
+from django.urls import path
+from .views import home,register,events,gallery,ideas,contact, success,register_user
+from . import views
 
-import os
-from django.core.wsgi import get_wsgi_application
-
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'receivetion.settings')
-
-application = get_wsgi_application()
+urlpatterns = [
+    path('admin/', admin.site.urls),
+    path('', home, name='home'),
+    path('home/', home, name='home'),
+    path("register_user/", register_user, name="register_user"),
+    path('success/', success, name='success'),
+    path('register/', register, name='register'),
+    path('events/', events, name='events'),
+    path('gallery/', gallery, name='gallery'),
+    path('ideas/', ideas, name='ideas'),
+    path('contact/', contact, name='contact'),
+]
